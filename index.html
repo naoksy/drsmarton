@@ -3,100 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr.Smarton</title>
-
-    
+    <title>Dr.Smarton - Ремонт Apple</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
-    /* Общие стили для всех экранов */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #ffffff; /* Белый фон */
-        color: #333;
-        text-align: center; /* Центрируем весь текст */
-    }
-
-    /* Стили для заголовка */
-    h1 {
-        background-color: #f44336; /* Алый цвет */
-        color: #ffffff; /* Белые буквы */
-        padding: 30px 20px; /* Отступы */
-        margin: 0;
-        font-size: 40px;
-        text-shadow: 0 0 10px #f44336, 0 0 20px #f44336; /* Эффект свечения */
-    }
-
-    /* Стили для параграфов */
-    p {
-        font-size: 18px;
-        line-height: 1.6;
-        margin: 20px;
-    }
-
-    /* Стиль для ссылок */
-    a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    /* Для мобильных экранов */
-    @media (max-width: 600px) {
-        h1 {
-            font-size: 28px;
-            padding: 15px;
-        }
-
-        p {
-            font-size: 16px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
         }
 
         body {
-            padding: 10px;
-        }
-    }
-
-    /* Для больших экранов (планшеты и десктопы) */
-    @media (min-width: 601px) {
-        h1 {
-            font-size: 40px;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
 
-        p {
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .logo {
+            background: #f44336;
+            padding: 20px;
+            font-size: 36px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px #ff5f5f;
+            border-radius: 10px;
+        }
+
+        .intro {
             font-size: 20px;
+            margin: 20px 0;
         }
-    }
-</style>
 
+        .services, .contacts {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
 
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 12px 20px;
+            margin: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: white;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    <h1>Dr.Smarton</h1>
-    
-    <p><strong>Приветствуем вас!</strong></p>
-    <p>Мы — компания <strong>Dr.Smarton</strong>, на рынке с 2016 года. Мы занимаемся ремонтом техники Apple и продажей комплектующих.</p>
-    <p>Наши услуги:</p>
-    <ul>
-        <li>Модульный ремонт</li>
-        <li>Пайка</li>
-        <li>Переклейка экранов</li>
-    </ul>
-    
-    <p><strong>Контакты:</strong></p>
-    <p>📞 Филиал Горбушка: <a href="tel:+79778671557">+7 (977) 867-15-57</a></p>
-    <p>📞 Филиал Савеловский: <a href="tel:+79390004345">+7 (939) 000-43-45</a></p>
-
-    <p><strong>Наши группы:</strong></p>
-    <p>📢 <a href="https://t.me/drsmartonshop">Группа в Telegram</a></p>
-    <p>📢 <a href="https://chat.whatsapp.com/I7KFmgPSwFT1Nol1H9VXqa">Группа в WhatsApp</a></p>
-
-    <p><strong>Мы на карте:</strong></p>
-    <p>📍 <a href="https://yandex.ru/maps/org/85931675899">Найти нас на Яндекс.Картах</a></p>
-
+    <div class="container">
+        <div class="logo">Dr.Smarton</div>
+        <p class="intro">Мы с 2016 года занимаемся ремонтом техники Apple и продажей комплектующих.</p>
+        
+        <div class="services">
+            <h2>Наши услуги</h2>
+            <ul>
+                <li>Модульный ремонт</li>
+                <li>Пайка</li>
+                <li>Переклейка экранов</li>
+            </ul>
+        </div>
+        
+        <div class="contacts">
+            <h2>Контакты</h2>
+            <p>📞 Горбушка: <a href="tel:+79778671557">+7 (977) 867-15-57</a></p>
+            <p>📞 Савеловский: <a href="tel:+79390004345">+7 (939) 000-43-45</a></p>
+            <a href="https://t.me/drsmartonshop">Группа в Telegram</a>
+            <a href="https://chat.whatsapp.com/I7KFmgPSwFT1Nol1H9VXqa">Группа в WhatsApp</a>
+            <a href="https://yandex.ru/maps/org/85931675899">Мы на Яндекс.Картах</a>
+        </div>
+    </div>
 </body>
 </html>
-
