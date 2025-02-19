@@ -31,8 +31,9 @@
             font-size: 36px;
             font-weight: 600;
             text-transform: uppercase;
-            text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; /* Эффект свечения */
+            color: white;
             border-radius: 10px;
+            text-shadow: 0 0 30px #ff0000, 0 0 60px #ff0000, 0 0 90px #ff0000; /* Усиленное свечение */
             margin-bottom: 20px;
         }
 
@@ -50,7 +51,7 @@
             font-size: 18px;
             font-weight: 600;
             text-transform: uppercase;
-            background: transparent;
+            background: rgba(255, 255, 255, 0.1); /* Добавлен фон, чтобы кнопки не сливались */
             color: white;
             border: 2px solid white;
             border-radius: 10px;
@@ -59,7 +60,7 @@
         }
 
         .menu button:hover, .menu button:focus {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .submenu {
@@ -75,8 +76,67 @@
         }
 
         .submenu button {
-            background: rgba(255, 255, 255, 0.1);
-            margin-top: 5p
+            background: rgba(255, 255, 255, 0.2);
+            margin-top: 5px;
+        }
 
+        .contacts {
+            margin-top: 30px;
+        }
 
+        .contacts a {
+            display: block;
+            color: #ff4444;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .contacts a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleSubmenu(id) {
+            let submenu = document.getElementById(id);
+            submenu.classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Dr.Smarton</div>
+        
+        <div class="menu">
+            <button onclick="toggleSubmenu('services')">Услуги</button>
+            <div id="services" class="submenu">
+                <button>iPhone</button>
+                <button>MacBook</button>
+                <button>iPad</button>
+                <button>Apple Watch</button>
+            </div>
+
+            <button onclick="toggleSubmenu('parts')">Запчасти</button>
+            <div id="parts" class="submenu">
+                <button>iPhone</button>
+                <button>MacBook</button>
+                <button>iPad</button>
+                <button>Apple Watch</button>
+            </div>
+
+            <button>Гарантийный талон</button>
+            <button>Скачать прайс-лист</button>
+        </div>
+        
+        <div class="contacts">
+            <h2>Контакты</h2>
+            <p>📞 Горбушка: <a href="tel:+79778671557">+7 (977) 867-15-57</a></p>
+            <p>📞 Савеловский: <a href="tel:+79390004345">+7 (939) 000-43-45</a></p>
+            <a href="https://t.me/drsmartonshop">Группа в Telegram</a>
+            <a href="https://chat.whatsapp.com/I7KFmgPSwFT1Nol1H9VXqa">Группа в WhatsApp</a>
+            <a href="https://yandex.ru/maps/org/85931675899">Мы на Яндекс.Картах</a>
+        </div>
+    </div>
+</body>
+</html>
 
