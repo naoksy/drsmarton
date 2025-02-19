@@ -14,15 +14,10 @@
         }
 
         body {
-            background: linear-gradient(135deg, #1a1a1a, #333);
+            background: black;
             color: white;
             text-align: center;
             padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
         }
 
         .logo {
@@ -33,69 +28,94 @@
             text-transform: uppercase;
             text-shadow: 0 0 15px #ff5f5f;
             border-radius: 10px;
+            display: inline-block;
         }
 
-        .intro {
-            font-size: 20px;
-            margin: 20px 0;
-        }
-
-        .services, .contacts {
+        .menu {
             margin: 30px 0;
-            padding: 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
+            padding: 10px;
+            text-align: left;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 200px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
-        li {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-
-        a {
+        .button {
             display: inline-block;
             text-decoration: none;
             color: white;
             padding: 12px 20px;
             margin: 10px;
             border: 2px solid white;
-            border-radius: 5px;
+            border-radius: 10px;
             transition: 0.3s;
+            background: rgba(255, 255, 255, 0.2);
         }
 
-        a:hover {
-            background: white;
-            color: black;
+        .button:hover {
+            background: transparent;
+        }
+
+        .contacts {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">Dr.Smarton</div>
-        <p class="intro">Мы с 2016 года занимаемся ремонтом техники Apple и продажей комплектующих.</p>
-        
-        <div class="services">
-            <h2>Наши услуги</h2>
-            <ul>
-                <li>Модульный ремонт</li>
-                <li>Пайка</li>
-                <li>Переклейка экранов</li>
-            </ul>
+    <div class="logo">Dr.Smarton</div>
+    
+    <div class="menu">
+        <div class="dropdown">
+            <a class="button">Услуги</a>
+            <div class="dropdown-content">
+                <p>📱 iPhone</p>
+                <p>💻 MacBook</p>
+                <p>📟 iPad</p>
+                <p>⌚ Apple Watch</p>
+            </div>
         </div>
         
-        <div class="contacts">
-            <h2>Контакты</h2>
-            <p>📞 Горбушка: <a href="tel:+79778671557">+7 (977) 867-15-57</a></p>
-            <p>📞 Савеловский: <a href="tel:+79390004345">+7 (939) 000-43-45</a></p>
-            <a href="https://t.me/drsmartonshop">Группа в Telegram</a>
-            <a href="https://chat.whatsapp.com/I7KFmgPSwFT1Nol1H9VXqa">Группа в WhatsApp</a>
-            <a href="https://yandex.ru/maps/org/85931675899">Мы на Яндекс.Картах</a>
+        <div class="dropdown">
+            <a class="button">Запчасти</a>
+            <div class="dropdown-content">
+                <p>📱 iPhone</p>
+                <p>💻 MacBook</p>
+                <p>📟 iPad</p>
+                <p>⌚ Apple Watch</p>
+            </div>
         </div>
+        
+        <a class="button" href="#">Гарантийный талон</a>
+        <a class="button" href="#">Скачать прайс-лист</a>
+    </div>
+    
+    <div class="contacts">
+        <h2>Контакты</h2>
+        <p>📞 Горбушка: <a href="tel:+79778671557">+7 (977) 867-15-57</a></p>
+        <p>📞 Савеловский: <a href="tel:+79390004345">+7 (939) 000-43-45</a></p>
+        <a class="button" href="https://t.me/drsmartonshop">Группа в Telegram</a>
+        <a class="button" href="https://chat.whatsapp.com/I7KFmgPSwFT1Nol1H9VXqa">Группа в WhatsApp</a>
+        <a class="button" href="https://yandex.ru/maps/org/85931675899">Мы на Яндекс.Картах</a>
     </div>
 </body>
 </html>
+
